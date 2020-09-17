@@ -46,6 +46,76 @@
                 text-shadow: 2px 2px black;
             }
 
+            #history {
+                background-image: url(images/history.jpg);
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #history div {
+                background-color: rgba(138, 138, 138, 0.65);
+                padding: 1em;
+                width: 75%;
+            }
+
+            #history div h2 {
+                text-align: center;
+                color: white;
+                text-shadow: 2px 2px black;
+            }
+
+            #modern {
+                background-color: grey;
+            }
+
+            #modern ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cards {
+                width: 25%;
+                margin: 1em;
+                background-color: white;
+            }
+
+            .cards > img {
+                width: 100%;
+            }
+
+            #competition {
+                background-color: purple;
+                color: white;
+                display: flex;
+            }
+
+            #competition > div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 75%;
+                margin: auto;
+            }
+
+            #competition > div > div:nth-child(1) {
+                flex: 3;
+                margin: 1em;
+            }
+
+            #competition > div > div:nth-child(2) {
+                flex: 2;
+                margin: 1em;
+            }
+
+            #contact {
+                min-height: 50vh;
+            }
+
         </style>
 	</head>
 	<body>
@@ -55,7 +125,7 @@
                 <ul>
                     <li><a href="#history">History</a></li>
                     <li><a href="#modern">Modern Day</a></li>
-                    <li><a href="competition">Competition</a></li>
+                    <li><a href="#competition">Competition</a></li>
                 </ul>
             </nav>
 
@@ -64,23 +134,88 @@
             </section>
 
 			<section id="history">
-                <h2>History</h2>
-                <p>Some Text</p>
+                <div>
+                    <h2>History</h2>
+                    <p>First grand prix took place in 1906 in France, first official motorsport race.
+                        First championship race for F1 occurred in 1950 in England.
+                        Original cars had 1.5L supercharged or 4.5L normally aspirated engines (400 to 600 hp).
+                        </p>
+                </div>
             </section>
 
 			<section id="modern">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="cards">
+                        <h3>Car</h3>
+                        <img src="images/car.jpg" alt="">
+                        <p>Modern day cars use 1.6 L V6 hybrid turbocharged engines (875 to 1,000 hp) (19k rpm)
+                            needs to be rebuilt every 500 miles Average 4 mpg
+                            Use aerodynamics to reduce air resistance and build up downforce for grip, combined downforce of about 2,500 kilograms (5,512 pounds). 
+                            The minimum weight for an F1 car is 1,500 lb including the driver.
+                            Average cost $10 mil excluding research 
+                            The average F1 car can go from 0 to 100 mph and then decelerate back to 0 in less than five seconds
+                        </p>
+                        <button>Check out the cars!</button>
+                    </li>
+                    <li class="cards">
+                        <h3>Driver</h3>
+                        <img src="images/driver.webp" alt="">
+                        <p>Start from other motorsports and work their way up 
+                            Usually start very young with go carting 
+                            Physical and mental endurance 
+                            Race can be 90mins to 2 hrs 
+                            Drivers loses approximately 8lb during a race 
+                            Drivers experience up to 5G under braking and 3G under acceleration
+                        </p>
+                        <button>Check out the drivers!</button>
+                    </li>
+                    <li class="cards">
+                        <h3>Teams</h3>
+                        <img src="images/team.jpg" alt="">
+                        <p>
+                            most teams are owned by manufacturers, others are owned privately
+                            Two drivers
+                            teams consists of R & D, technicians, and pit crew
+                            Pit crew have to Change the tires, Refuel the car, Adjust the wings, Replace damaged bodywork, Clear debris from the car's intake
+                            Fastest pit stop 1.9 seconds
+                            Teams communicate with drivers
+                            The typical annual budget of a Formula One team is about $120 million
+                        </p>
+                        <button>Check out the teams!</button>
+                    </li>
                 </ul>
             </section>
 
 			<section id="competition">
-                <h2>Competition</h2>
+                <div>
+                    <div>
+                        <h2>Competition</h2>
+                        <p>Season consists of 15-17 races on different tracks 
+                            Drivers get points based on position 
+                            Driver with most points is champion
+                            Qualifying before race for grid position then race
+                            If a driver is defending his position, he can't weave back and forth. He is allowed a single blocking move and no more.
+                            </p>
+                    </div>
+                    <div>
+                        <img src="images/competition.jpg">
+                    </div>
+                </div>
             </section>
 
-			<footer id="contact"></footer>
+			<footer id="contact">
+                <label>
+                    <span>Name</span>
+                </label>
+                <label>
+                    <span>Email</span>
+                </label>
+                <label>
+                    <span>Message</span>
+                    <textarea></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </footer>
 		</main>
 		
 	</body>
