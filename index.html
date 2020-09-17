@@ -25,6 +25,10 @@
                 color: white;
             }
 
+            #nav > h1 {
+                margin: 0 0 0 2em;
+            }
+
             #nav ul {
                 display: flex;
                 flex-direction: row;
@@ -32,18 +36,34 @@
             }
 
             #nav ul li {
-                margin: 0 1em 0 1em;
+                margin: 0 1em 0 2em;
+            }
+
+            #nav > ul > li > a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.5em;
             }
 
             #banner {
                 background-image: url(images/banner.jpg);
                 background-size: cover;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                font-size: 4em;
                 color: white;
-                text-shadow: 2px 2px black;
+                text-shadow: 3px 3px black;
+            }
+
+            #banner h2 {
+                font-size: 8em;
+                margin: 0;
+                padding: 0;
+            }
+
+            #banner p {
+                font-size: 2em;
             }
 
             #history {
@@ -58,38 +78,61 @@
                 background-color: rgba(138, 138, 138, 0.65);
                 padding: 1em;
                 width: 75%;
+                border-radius: 40px;
             }
 
             #history div h2 {
                 text-align: center;
                 color: white;
                 text-shadow: 2px 2px black;
+                font-size: 4em;
+            }
+
+            #history div p {
+                color: white;
+                text-shadow: 2px 2px black;
+                font-size: 2em;
             }
 
             #modern {
-                background-color: grey;
+                background-image: url(images/cards_background.jpg);
             }
 
             #modern ul {
                 list-style: none;
                 display: flex;
-                justify-content: center;
-                margin: 0;
-                padding: 0;
+                justify-content: space-evenly;
+                align-items: baseline | flex-end | center;
+                margin: 5em;
             }
 
             .cards {
                 width: 25%;
                 margin: 1em;
+                border-radius: 20px;
                 background-color: white;
             }
 
             .cards > img {
                 width: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+            }
+
+            .cards h3, .cards p {
+                padding: 0 20px 0 20px;
+                line-height: 2em;
+            }
+
+            .cards button {
+                margin: 0 25% 0 25%;
             }
 
             #competition {
-                background-color: purple;
+                background-image: url(images/competition_background.jpg);
                 color: white;
                 display: flex;
             }
@@ -102,9 +145,21 @@
                 margin: auto;
             }
 
+            #competition > div > div > h2 {
+                font-size: 3em;
+            }
+
+            #competition > div > div > p {
+                line-height: 2em;
+                font-size: 1.5em;
+            }
+
             #competition > div > div:nth-child(1) {
                 flex: 3;
                 margin: 1em;
+                background-color: rgba(138, 138, 138, 0.65);
+                padding: 0 2em 0 2em;
+                border-radius: 40px;
             }
 
             #competition > div > div:nth-child(2) {
@@ -112,8 +167,19 @@
                 margin: 1em;
             }
 
+            #competition > div > div:nth-child(2) img {
+                border-radius: 40px;
+            }
+
             #contact {
                 min-height: 50vh;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            label {
+                border: black;
             }
 
         </style>
@@ -126,19 +192,21 @@
                     <li><a href="#history">History</a></li>
                     <li><a href="#modern">Modern Day</a></li>
                     <li><a href="#competition">Competition</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
 			<section id="banner">
+                <p>A Brief Intro to</p>
                 <h2>Formula 1 Racing</h2>
             </section>
 
 			<section id="history">
                 <div>
                     <h2>History</h2>
-                    <p>First grand prix took place in 1906 in France, first official motorsport race.
-                        First championship race for F1 occurred in 1950 in England.
-                        Original cars had 1.5L supercharged or 4.5L normally aspirated engines (400 to 600 hp).
+                    <p> - The first official motorsport race took place in 1906 in France<br>
+                        - The first championship race for F1 occurred in 1950 in England. <br>
+                        - The original cars had 1.5L supercharged or 4.5L normally aspirated engines (400 to 600 hp).
                         </p>
                 </div>
             </section>
@@ -146,39 +214,38 @@
 			<section id="modern">
                 <ul>
                     <li class="cards">
-                        <h3>Car</h3>
-                        <img src="images/car.jpg" alt="">
-                        <p>Modern day cars use 1.6 L V6 hybrid turbocharged engines (875 to 1,000 hp) (19k rpm)
-                            needs to be rebuilt every 500 miles Average 4 mpg
-                            Use aerodynamics to reduce air resistance and build up downforce for grip, combined downforce of about 2,500 kilograms (5,512 pounds). 
-                            The minimum weight for an F1 car is 1,500 lb including the driver.
-                            Average cost $10 mil excluding research 
+                        <img src="images/moderncar.jpg" alt="">
+                        <h3>Cars</h3>
+                        <p> Modern day cars use 1.6 L V6 hybrid turbocharged engines (875 to 1,000 hp) (19k rpm), they average 4 mpg <br>
+                            The engines need to be rebuilt every 500 miles
+                            Use aerodynamics to reduce air resistance and build up downforce for grip, combined downforce of about 2,500 kilograms (5,512 pounds). <br>
+                            The minimum weight for an F1 car is 1,500 lb including the driver. <br>
+                            Average cost $10 mil excluding research <br>
                             The average F1 car can go from 0 to 100 mph and then decelerate back to 0 in less than five seconds
                         </p>
                         <button>Check out the cars!</button>
                     </li>
                     <li class="cards">
-                        <h3>Driver</h3>
                         <img src="images/driver.webp" alt="">
-                        <p>Start from other motorsports and work their way up 
-                            Usually start very young with go carting 
-                            Physical and mental endurance 
-                            Race can be 90mins to 2 hrs 
-                            Drivers loses approximately 8lb during a race 
+                        <h3>Drivers</h3>
+                        <p> Start from other motorsports and work their way up <br>
+                            Usually start very young with go carting  <br>
+                            Physical and mental endurance <br>
+                            Race can be 90mins to 2 hrs <br>
+                            Drivers loses approximately 8lb during a race <br>
                             Drivers experience up to 5G under braking and 3G under acceleration
                         </p>
                         <button>Check out the drivers!</button>
                     </li>
                     <li class="cards">
-                        <h3>Teams</h3>
                         <img src="images/team.jpg" alt="">
+                        <h3>Teams</h3>
                         <p>
-                            most teams are owned by manufacturers, others are owned privately
-                            Two drivers
-                            teams consists of R & D, technicians, and pit crew
-                            Pit crew have to Change the tires, Refuel the car, Adjust the wings, Replace damaged bodywork, Clear debris from the car's intake
-                            Fastest pit stop 1.9 seconds
-                            Teams communicate with drivers
+                            Most teams are owned by manufacturers, others are owned privately <br>
+                            Each team consist of two drivers, the pit crew, race enigneers, and R & D<br>
+                            Pit crew have to change the tires, refuel the car, adjust the wings, replace damaged bodywork, cear debris from the car's intake <br>
+                            Fastest pit stop 1.9 seconds <br>
+                            Teams communicate with drivers <br>
                             The typical annual budget of a Formula One team is about $120 million
                         </p>
                         <button>Check out the teams!</button>
@@ -190,12 +257,12 @@
                 <div>
                     <div>
                         <h2>Competition</h2>
-                        <p>Season consists of 15-17 races on different tracks 
-                            Drivers get points based on position 
-                            Driver with most points is champion
-                            Qualifying before race for grid position then race
+                        <p> Season consists of 15-17 races on different tracks <br>
+                            Drivers get points based on position <br>
+                            Driver with most points is champion <br>
+                            Qualifying before race for grid position then race <br>
                             If a driver is defending his position, he can't weave back and forth. He is allowed a single blocking move and no more.
-                            </p>
+                        </p>
                     </div>
                     <div>
                         <img src="images/competition.jpg">
@@ -206,9 +273,11 @@
 			<footer id="contact">
                 <label>
                     <span>Name</span>
+                    <input type="text">
                 </label>
                 <label>
                     <span>Email</span>
+                    <input type="email" name="" id="">
                 </label>
                 <label>
                     <span>Message</span>
